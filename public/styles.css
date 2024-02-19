@@ -244,3 +244,55 @@ button[type="submit"]:hover {
     font-size: 18px;
     color: #333;
 }
+.book-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.book-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.book-form input, .book-form button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+}
+
+.book img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.book-info {
+    display: flex;
+    align-items: center;
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-cover {
+    display: flex;
+    align-items: center;
+}
+
