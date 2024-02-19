@@ -220,3 +220,27 @@ button[type="submit"]:hover {
 .success-message {
     color: #5cb85c;
 }
+#historyBtn {
+    margin-top: 20px;
+}
+
+#history {
+    margin-top: 20px;
+}
+
+.index-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.center-gif {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.site-info {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}

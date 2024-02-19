@@ -1,9 +1,11 @@
 const express = require('express');
-const router = express.Router();
 const axios = require('axios');
+const router = express.Router();
+
+let searchHistory = [];
 
 router.get('/', (req, res) => {
-    res.render('weather', { weatherData: null });
+    res.render('weather', { weatherData: null, history: searchHistory });
 });
 
 router.post('/', async (req, res) => {
@@ -26,12 +28,14 @@ router.post('/', async (req, res) => {
             rainVolume: response.data.rain ? response.data.rain['3h'] : 'No rain data'
         };
 
-        res.render('weather', { weatherData });
+        const searchRecord = { city, time: new Date().toISOString() };
+        searchHistory.push(searchRecord);
+
+        res.render('weather', { weatherData, history: searchHistory });
     } catch (error) {
         console.error(error);
-        res.render('weather', { weatherData: null, errorMessage: 'Error retrieving weather data' });
+        res.render('weather', { weatherData: null, errorMessage: 'Error retrieving weather data', history: searchHistory });
     }
 });
-
 
 module.exports = router;
