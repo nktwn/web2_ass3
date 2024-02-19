@@ -1,0 +1,30 @@
+<%- include('header') %>
+<div class="weather-container">
+    <h1>Weather Information</h1>
+    <form action="/weather" method="post" class="weather-form">
+        <input type="text" name="city" placeholder="Enter a city" required>
+        <button type="submit">Get Weather</button>
+    </form>
+    <% if (weatherData) { %>
+        <div class="weather-data">
+            <h2>Weather in city:<%= weatherData.name %></h2>
+            <div class="weather-detail">
+                <img src="<%= weatherData.iconUrl %>" alt="Weather Icon" class="weather-icon">
+                <div class="weather-info">
+                    <p>Description: <span><%= weatherData.description %></span></p>
+                    <p>Temperature: <span><%= weatherData.temperature %>°C</span></p>
+                    <p>Feels Like: <span><%= weatherData.feelsLike %>°C</span></p>
+                    <p>Humidity: <span><%= weatherData.humidity %>%</span></p>
+                    <p>Pressure: <span><%= weatherData.pressure %> hPa</span></p>
+                    <p>Wind Speed: <span><%= weatherData.windSpeed %> m/s</span></p>
+                    <p>Country: <span><%= weatherData.countryCode %></span></p>
+                    <p>Coordinates: <span>Lat <%= weatherData.coordinates.lat %>, Lon <%= weatherData.coordinates.lon %></span></p>
+                    <p>Rain Volume for the Last 3 Hours: <span><%= weatherData.rainVolume %> mm</span></p>
+                </div>
+            </div>
+        </div>
+    <% } else if (typeof errorMessage !== 'undefined') { %>
+        <p class="error-message"><%= errorMessage %></p>
+    <% } %>
+</div>
+<%- include('footer') %>

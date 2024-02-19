@@ -39,20 +39,23 @@ const redirectToHomeIfLoggedIn = (req, res, next) => {
 const ifAdmin = (req, res, next) => {
     const token = req.cookies.token;
 
+    if (!token) {
+        return res.redirect('/login');
+    }
 
-    jwt.verify(token,process.env.JWT_SECRET, (err, decoded) => {
+    jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
         if (err) {
             res.clearCookie('token');
             return res.redirect('/login');
         } else {
-            if (decoded.isAdmin) {
+            if (decoded.username === "admin" && decoded.isAdmin) {
                 return next();
             } else {
                 return res.status(403).send('Unauthorized Access - Admin Only');
             }
         }
     });
-
 };
+
 
 module.exports = { verifyToken, redirectToHomeIfLoggedIn, ifAdmin };

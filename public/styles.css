@@ -97,3 +97,126 @@ input:focus, select:focus, textarea:focus {
     border-color: var(--main-color);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+.weather-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.weather-form input, .weather-form button {
+    padding: 10px;
+    margin: 5px;
+}
+
+.weather-data {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.weather-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-info {
+    margin-left: 20px;
+    text-align: left;
+}
+
+.weather-info p {
+    line-height: 1.6;
+}
+
+.weather-info span {
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+}
+
+.admin-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-title {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #4facfe;
+    color: white;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+form.update-form, form.delete-form, form.create-form {
+    margin-top: 10px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    background-color: #4facfe;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3d823f;
+}
+
+.error-message, .success-message {
+    color: #d9534f;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.success-message {
+    color: #5cb85c;
+}

@@ -49,6 +49,7 @@ app.use('/login', redirectToHomeIfLoggedIn, require('./routes/login'));
 app.use('/register', redirectToHomeIfLoggedIn, require('./routes/register'));
 app.use('/', verifyToken, require('./routes/index'));
 app.use('/logout', verifyToken, require('./routes/logout'));
+app.use('/weather', require('./routes/weather'));
 app.use('/profile', verifyToken, require('./routes/profile'));
 app.use('/admin', verifyToken, ifAdmin, require('./routes/admin'));
 
