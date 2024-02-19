@@ -1,0 +1,99 @@
+:root {
+    --main-color: #4facfe;
+    --hover-color: #3d823f;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --text-color: #333;
+    --background-gradient-start: #4facfe;
+    --background-gradient-end: #00f2fe;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+header {
+    background: linear-gradient(to right, var(--background-gradient-start) 0%, var(--background-gradient-end) 100%);
+    padding: 15px 0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: var(--text-color);
+    border-top: 1px solid #eaeaea;
+}
+
+.center {
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.logo img {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.error-message, .success-message {
+    font-size: 1em;
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+input, select, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Account for padding and border */
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
